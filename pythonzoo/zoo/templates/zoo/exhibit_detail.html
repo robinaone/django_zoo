@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>{{ exhibit.name }} at {{ exhibit.zoo.name }}</h1>
+<br>
+
+<div class="neighborTitle">
+<h1>You can go:</h1>
+{% for neighbor in exhibit.fromExhibit.all %}
+  <a href="{{ neighbor.toExhibit.get_absolute_url }}"><p>{{ neighbor.direction }} to {{ neighbor.toExhibit }}</p></a>
+{% endfor %}
+</div>
+
+<div class="animalTitle">
+<h1>Animals here:</h1>
+{% load static %}
+{% for animal in exhibit.animal_set.all %}
+  <a href="{{ animal.get_absolute_url }}"><img src="{% static animal.imageFileName %}"></img>
+  <h3>{{ animal.name }}</h3></a>
+{% endfor %}
+</div>
+
+{% endblock %}

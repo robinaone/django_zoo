@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Zoos to Visit:</h1>
+
+<br>
+<br>
+
+{% for zoo in zoo_list %}
+  <a href="{{ zoo.get_absolute_url }}"><img class="zooPic" src="{{ zoo.logoFileName }}"></img></a>
+  <p>{{ zoo.name }}</p>
+  <br>
+{% endfor %}
+
+{% endblock %}

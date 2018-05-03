@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>{{ animal.name }} in the {{ animal.exhibit }} Exhibit!</h1>
+
+{% load static %}
+
+<img class="animalPic" src="{% static animal.imageFileName %}"></img>
+
+<h3>Sound {{animal.name }} makes the most:</h3>
+{{ animal.sound }}
+
+<h3>Food {{ animal.name }} eats the most:</h3>
+{{ animal.food }}
+
+<h3>Political Orientation:</h3>
+{{ animal.political }}
+
+{% endblock %}

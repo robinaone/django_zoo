@@ -1,4 +1,58 @@
 body {
-  background-color: black;
-  color: white;
+  color: black;
+  text-align: center;
+}
+
+li {
+  float: right;
+  display: inline;
+  font-size: 2em;
+}
+
+.animalTitle img{
+  height: 80px;
+}
+
+.animalPic {
+  height: 100px;
+}
+
+.splash {
+  float: left;
+  height: 50px;
+  width: auto;
+}
+
+.zooPic {
+  width: 200px;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
 }
