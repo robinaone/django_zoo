@@ -8,13 +8,15 @@
 
 <img class="animalPic" src="{% static animal.imageFileName %}"></img>
 
-<h3>Sound {{animal.name }} makes the most:</h3>
+<h3>Sound the {{animal.name }} makes the most:</h3>
 {{ animal.sound }}
 
-<h3>Food {{ animal.name }} eats the most:</h3>
+<h3>Food the {{ animal.name }} eats the most:</h3>
 {{ animal.food }}
 
-<h3>Political Orientation:</h3>
+<h3>{{ animal.name }}'s Political Orientation:</h3>
 {{ animal.political }}
+
+<h3><a class="goBack" href="{{ animal.exhibit.get_absolute_url }}">Go back?</a></h3>
 
 {% endblock %}

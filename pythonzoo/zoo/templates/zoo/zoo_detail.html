@@ -4,6 +4,6 @@
 
 <h1>Exhibits in {{ zoo.name }}!</h1>
 {% for exhibit in zoo.exhibit_set.all %}
-  <a href="{{ exhibit.get_absolute_url }}"><p>{{ exhibit.name }}</a></p>
+  <a class="exhibitsP" href="{{ exhibit.get_absolute_url }}"><p>{{ exhibit.name }}</a></p>
 {% endfor %}
 {% endblock %}

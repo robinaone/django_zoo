@@ -3,18 +3,20 @@
 
 <head>
   {% block title %}<title>Welcome to Caleb's Zoo Site Boo Thang!</title>{% endblock %}
+  {% load static %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="{% static 'images/zoo.ico' %}" type="image/x-icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  {% load static %}
+
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
 <body>
-  <a href="http://127.0.0.1:8000/zoo/"><img src="https://i.ebayimg.com/images/i/281082785838-0-1/s-l1000.jpg" class="splash"></img></a>
+  <a href="http://127.0.0.1:8000/zoo/"><img src="{% static 'images/zoo.png' %}" class="splash"></img></a>
   <ul>
     <a href="/zoo/contactus"><li>Contact Us</li></a>
     <li> | </p>
